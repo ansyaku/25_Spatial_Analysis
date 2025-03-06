@@ -1,1 +1,1 @@
-# 25_Spatial_Analysis
+# Spatial Analysis
