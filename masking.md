@@ -33,7 +33,7 @@ Let's say we have an image where `B4` values look like this:
 
 After applying the mask, pixels with `B4 < 0.3` will be **ignored (transparent)**, while others remain for further analysis.
 
-```markdown
+
 # Klasifikasi Tutupan Lahan Berdasarkan NDVI
 
 Kode ini digunakan untuk **masking** atau pemfilteran area berdasarkan nilai **NDVI (Normalized Difference Vegetation Index)** guna mengklasifikasikan tutupan lahan berdasarkan vegetasi.
