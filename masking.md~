@@ -19,16 +19,3 @@ In GEE, masking is done using binary values:
 
 3. Efficient Processing:
 - Masked pixels are ignored in calculations, reducing computational load and improving efficiency.
-
-# Example: How Masking Works Visually
-
-Let's say we have an image where `B4` values look like this:
-
-| Pixel Position | B4 Value | Mask Applied (B4 ≥ 0.3) |
-|---------------|----------|-------------------------|
-| (1,1)        | 0.5      | ✅ (Keep)               |
-| (1,2)        | 0.2      | ❌ (Mask)               |
-| (2,1)        | 0.4      | ✅ (Keep)               |
-| (2,2)        | 0.1      | ❌ (Mask)               |
-
-After applying the mask, pixels with `B4 < 0.3` will be **ignored (transparent)**, while others remain for further analysis.
