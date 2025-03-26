@@ -41,7 +41,7 @@ Kode ini digunakan untuk **masking** atau pemfilteran area berdasarkan nilai **N
 ## 1. Masking Area Sabana (NDVI antara 0.2 - 0.5)
 ```python
 sabana = ndvi.gt(0.2).And(ndvi.lt(0.5)).selfMask()
-
+```
 - `ndvi.gt(0.2)`: Memilih piksel dengan **NDVI lebih besar dari 0.2** (vegetasi ringan).
 - `ndvi.lt(0.5)`: Memilih piksel dengan **NDVI kurang dari 0.5** (bukan hutan lebat).
 - `.And(...)`: Menggabungkan kedua kondisi sehingga hanya piksel dengan **NDVI antara 0.2 dan 0.5** yang dipilih.
@@ -50,13 +50,13 @@ sabana = ndvi.gt(0.2).And(ndvi.lt(0.5)).selfMask()
 ## 2. Masking Area Hutan (NDVI > 0.5)
 ```python
 hutan = ndvi.gte(0.5).selfMask()
-
+```
 - `ndvi.gte(0.5)`: Memilih semua piksel dengan **NDVI lebih besar atau sama dengan 0.5**.
 - `.selfMask()`: Menghapus semua piksel yang **tidak memenuhi kriteria**, sehingga hanya area dengan NDVI tinggi yang tersisa.
 
 ## 3. Masking Lahan Terbuka (NDVI < 0.2)
 ```python
 lahan_terbuka = ndvi.lt(0.2).selfMask()
-
+```
 - `ndvi.lt(0.2)`: Memilih semua piksel dengan **NDVI kurang dari 0.2**, yang biasanya merupakan lahan tanpa vegetasi.
 - `.selfMask()`: Menghapus semua piksel yang **tidak memenuhi kriteria**, sehingga hanya lahan terbuka yang tersisa.
